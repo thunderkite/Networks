@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробный интерактивный конспект по компьютерным сетям и Wi-Fi с визуализациями и анимациями">
+    <meta name="keywords" content="компьютерные сети, Wi-Fi, OSI, TCP/IP, Ethernet, DNS, сетевое оборудование">
+    <meta name="author" content="Networks Guide">
+    <title>Компьютерные сети и Wi-Fi - Интерактивный конспект</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-icon sun">☀️</span>
+        <span class="theme-icon moon">🌙</span>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Search -->
+    <div class="search-container" id="searchContainer">
+        <input type="text" class="search-input" id="searchInput" placeholder="Поиск по содержимому...">
+        <button class="search-close" id="searchClose">×</button>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>🌐 Компьютерные сети</h2>
+            <button class="search-toggle" id="searchToggle">🔍</button>
+        </div>
+        
+        <div class="sidebar-content">
+            <ul class="nav-list">
+                <li><a href="#introduction" class="nav-link">Введение</a></li>
+                <li><a href="#equipment" class="nav-link">Сетевое оборудование</a></li>
+                <li><a href="#network-types" class="nav-link">Типы сетей</a></li>
+                <li><a href="#models" class="nav-link">Модели и Протоколы</a></li>
+                <li><a href="#ethernet" class="nav-link">Ethernet</a></li>
+                <li><a href="#wifi" class="nav-link">Wi-Fi</a></li>
+                <li><a href="#router" class="nav-link">Роутер и DHCP</a></li>
+                <li><a href="#addressing" class="nav-link">Адресация</a></li>
+                <li><a href="#arp" class="nav-link">Протокол ARP</a></li>
+                <li><a href="#dns" class="nav-link">DNS</a></li>
+                <li><a href="#data-transmission" class="nav-link">Передача данных</a></li>
+                <li><a href="#wan-pon" class="nav-link">WAN и PON</a></li>
+                <li><a href="#diagnostics" class="nav-link">Диагностика</a></li>
+                <li><a href="#glossary" class="nav-link">Словарь терминов</a></li>
+                <li><a href="#visual-schemes" class="nav-link">Визуальные схемы</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar Toggle -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" id="breadcrumbs">
+            <span class="breadcrumb-item active">Главная</span>
+        </nav>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="content-section">
+            <h1 class="section-title">Компьютерные сети и Wi-Fi</h1>
+            <p class="section-subtitle">Подробнейший интерактивный конспект</p>
+            
+            <div class="intro-animation" id="introAnimation">
+                <div class="network-visualization">
+                    <div class="device computer">💻</div>
+                    <div class="device router">📡</div>
+                    <div class="device server">🖥️</div>
+                    <div class="device phone">📱</div>
+                    <div class="connection-lines"></div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Зачем нужны компьютерные сети?</h2>
+                <p><strong>Компьютерная сеть</strong> — это группа устройств (компьютеры, смартфоны, принтеры, камеры и т.д.), которые соединены между собой для обмена информацией и совместного использования ресурсов (например, файлов или интернета).</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📁</div>
+                        <h3>Передача файлов</h3>
+                        <p>Передавать файлы и сообщения без флешек и дискет</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖨️</div>
+                        <h3>Общие ресурсы</h3>
+                        <p>Печатать с любого компьютера на один принтер</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Интернет</h3>
+                        <p>Делиться интернетом сразу на все устройства дома</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Совместная работа</h3>
+                        <p>Работать совместно над проектами, хранить данные централизованно</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Исторический экскурс: Как раньше подключались к интернету?</h2>
+                <div class="history-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">📞</div>
+                        <div class="timeline-content">
+                            <h3>Dial-up (коммутируемое подключение)</h3>
+                            <ul>
+                                <li>Компьютер подключался к интернету через модем, который набирал телефонный номер провайдера</li>
+                                <li>Скорость была очень низкой (обычно 56 Кбит/с)</li>
+                                <li>Во время использования интернета телефонная линия была занята</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🔌</div>
+                        <div class="timeline-content">
+                            <h3>ADSL (поздняя технология)</h3>
+                            <ul>
+                                <li>Позволяла использовать интернет и телефон одновременно</li>
+                                <li>Скорость была выше (до нескольких Мбит/с)</li>
+                                <li>Работала через разделение частот</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Network Equipment Section -->
+        <section id="equipment" class="content-section">
+            <h2 class="section-title">Сетевое оборудование</h2>
+            
+            <div class="equipment-tabs">
+                <button class="tab-button active" data-tab="active">Активное оборудование</button>
+                <button class="tab-button" data-tab="passive">Пассивное оборудование</button>
+            </div>
+
+            <div class="tab-content active" id="active-tab">
+                <div class="content-block">
+                    <h3>Активное сетевое оборудование</h3>
+                    <p>Требует питания, обрабатывает и управляет данными — это «мозг» и «сердце» сети.</p>
+                    
+                    <div class="equipment-grid">
+                        <div class="equipment-card">
+                            <div class="equipment-icon">🔄</div>
+                            <h4>Маршрутизатор (роутер)</h4>
+                            <p>Указывает, какому устройству куда отправлять данные, соединяет разные сети</p>
+                            <button class="details-btn" data-equipment="router">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">🔀</div>
+                            <h4>Коммутатор (свитч)</h4>
+                            <p>Объединяет устройства в локальной сети, передаёт данные только нужному получателю</p>
+                            <button class="details-btn" data-equipment="switch">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">📡</div>
+                            <h4>Точка доступа</h4>
+                            <p>Преобразует проводную сеть в Wi-Fi, создаёт зону беспроводного покрытия</p>
+                            <button class="details-btn" data-equipment="ap">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">📶</div>
+                            <h4>Модем</h4>
+                            <p>Преобразует цифровой сигнал компьютера в аналоговый для передачи</p>
+                            <button class="details-btn" data-equipment="modem">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">🎯</div>
+                            <h4>Сетевая карта (NIC)</h4>
+                            <p>Устанавливается в устройства для подключения к сети</p>
+                            <button class="details-btn" data-equipment="nic">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">📈</div>
+                            <h4>Репитер</h4>
+                            <p>Усиливает сигнал, расширяет дальность сети</p>
+                            <button class="details-btn" data-equipment="repeater">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">🚦</div>
+                            <h4>Концентратор (хаб)</h4>
+                            <p>Передаёт входящий сигнал на все порты сразу (устарел)</p>
+                            <button class="details-btn" data-equipment="hub">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">🛡️</div>
+                            <h4>Межсетевой экран</h4>
+                            <p>Фильтрует трафик, защищает сеть от несанкционированного доступа</p>
+                            <button class="details-btn" data-equipment="firewall">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">🔄</div>
+                            <h4>Медиаконвертер</h4>
+                            <p>Преобразует один тип кабеля в другой</p>
+                            <button class="details-btn" data-equipment="converter">Подробнее</button>
+                        </div>
+                        
+                        <div class="equipment-card">
+                            <div class="equipment-icon">🖥️</div>
+                            <h4>Серверы</h4>
+                            <p>Мощные компьютеры для хранения данных и предоставления сервисов</p>
+                            <button class="details-btn" data-equipment="server">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="passive-tab">
+                <div class="content-block">
+                    <h3>Пассивное сетевое оборудование</h3>
+                    <p>Не требует питания, не обрабатывает данные — это «скелет» сети, обеспечивает физическую передачу сигналов.</p>
+                    
+                    <div class="passive-equipment-list">
+                        <div class="passive-item">
+                            <h4>🔌 Кабели</h4>
+                            <ul>
+                                <li><strong>Витая пара (UTP/STP):</strong> основной кабель для локальных сетей</li>
+                                <li><strong>Оптоволокно:</strong> для передачи данных на большие расстояния</li>
+                                <li><strong>Коаксиальный кабель:</strong> устарел для сетей</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="passive-item">
+                            <h4>🔗 Разъёмы и коннекторы</h4>
+                            <p>Соединяют кабели с устройствами (RJ-45 для витой пары, LC/SC для оптоволокна)</p>
+                        </div>
+                        
+                        <div class="passive-item">
+                            <h4>📋 Патч-панели</h4>
+                            <p>Организуют подключение кабелей в серверных, упрощают обслуживание</p>
+                        </div>
+                        
+                        <div class="passive-item">
+                            <h4>🔌 Патч-корды</h4>
+                            <p>Короткие кабели с разъёмами, соединяют патч-панели и устройства</p>
+                        </div>
+                        
+                        <div class="passive-item">
+                            <h4>🏠 Информационные розетки</h4>
+                            <p>Удобные точки подключения в стенах для устройств</p>
+                        </div>
+                        
+                        <div class="passive-item">
+                            <h4>🗄️ Монтажные шкафы и стойки</h4>
+                            <p>Для аккуратного размещения сетевого оборудования</p>
+                        </div>
+                        
+                        <div class="passive-item">
+                            <h4>📦 Кабель-каналы, лотки, короба</h4>
+                            <p>Укладывают и защищают кабели в зданиях</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Network Types Section -->
+        <section id="network-types" class="content-section">
+            <h2 class="section-title">Типы сетей</h2>
+            
+            <div class="content-block">
+                <h3>Локальная вычислительная сеть (ЛВС / LAN)</h3>
+                <p><strong>ЛВС (LAN, Local Area Network)</strong> — это сеть в пределах одного помещения/здания/офиса/квартиры.</p>
+                
+                <div class="lan-visualization" id="lanVisualization">
+                    <div class="lan-container">
+                        <div class="building">
+                            <div class="floor">
+                                <div class="device">💻</div>
+                                <div class="device">🖨️</div>
+                                <div class="device">📱</div>
+                            </div>
+                            <div class="floor">
+                                <div class="device">💻</div>
+                                <div class="device">📱</div>
+                            </div>
+                            <div class="central-switch">🔀</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-comparison">
+                    <div class="feature-category">
+                        <h4>Особенности ЛВС:</h4>
+                        <ul>
+                            <li>Ограничена территориально</li>
+                            <li>Высокая скорость (от 100 Мбит/с до 100 Гбит/с)</li>
+                            <li>Централизованное управление</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-category">
+                        <h4>Преимущества ЛВС:</h4>
+                        <ul>
+                            <li>Экономия ресурсов</li>
+                            <li>Удобство доступа</li>
+                            <li>Безопасность</li>
+                            <li>Масштабируемость</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Виртуальные локальные сети (VLAN)</h3>
+                <p><strong>VLAN</strong> — это технология, которая позволяет разделить одну физическую сеть на несколько логических подсетей.</p>
+                
+                <div class="vlan-demo" id="vlanDemo">
+                    <div class="physical-switch">
+                        <div class="switch-icon">🔀</div>
+                        <div class="vlan-groups">
+                            <div class="vlan-group vlan-1">
+                                <div class="vlan-label">VLAN 10 - Бухгалтерия</div>
+                                <div class="device">💻</div>
+                                <div class="device">💻</div>
+                            </div>
+                            <div class="vlan-group vlan-2">
+                                <div class="vlan-label">VLAN 20 - IT отдел</div>
+                                <div class="device">💻</div>
+                                <div class="device">🖥️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vlan-benefits">
+                    <h4>Для чего нужны VLAN?</h4>
+                    <ul>
+                        <li>Разделение пользователей по отделам</li>
+                        <li>Повышение безопасности</li>
+                        <li>Удобство управления</li>
+                        <li>Гибкость конфигурации</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- OSI/TCP-IP Models Section -->
+        <section id="models" class="content-section">
+            <h2 class="section-title">Модели и Протоколы Сетей</h2>
+            
+            <div class="content-block">
+                <h3>Что такое протокол?</h3>
+                <p><strong>Протокол</strong> — это набор правил, по которым устройства общаются друг с другом. Пример из жизни: письмо пишут на одном языке, чтобы получатель понял.</p>
+            </div>
+
+            <div class="models-container">
+                <div class="model-tabs">
+                    <button class="model-tab active" data-model="osi">Модель OSI</button>
+                    <button class="model-tab" data-model="tcpip">Модель TCP/IP</button>
+                </div>
+
+                <div class="model-content active" id="osi-model">
+                    <h3>Модель OSI — «Этажи» сетевого дома</h3>
+                    <p><strong>OSI (Open Systems Interconnection)</strong> — модель, разбивающая процесс передачи данных на 7 уровней.</p>
+                    
+                    <div class="osi-visualization" id="osiVisualization">
+                        <div class="osi-layers">
+                            <div class="layer layer-7" data-layer="7">
+                                <div class="layer-number">7</div>
+                                <div class="layer-name">Прикладной</div>
+                                <div class="layer-description">HTTP, FTP, DNS, SMTP</div>
+                                <div class="data-type">Данные</div>
+                            </div>
+                            <div class="layer layer-6" data-layer="6">
+                                <div class="layer-number">6</div>
+                                <div class="layer-name">Представления</div>
+                                <div class="layer-description">Кодировка, шифрование, сжатие</div>
+                                <div class="data-type">Данные</div>
+                            </div>
+                            <div class="layer layer-5" data-layer="5">
+                                <div class="layer-number">5</div>
+                                <div class="layer-name">Сеансовый</div>
+                                <div class="layer-description">Управление сессиями</div>
+                                <div class="data-type">Данные</div>
+                            </div>
+                            <div class="layer layer-4" data-layer="4">
+                                <div class="layer-number">4</div>
+                                <div class="layer-name">Транспортный</div>
+                                <div class="layer-description">TCP/UDP, порты</div>
+                                <div class="data-type">Сегмент</div>
+                            </div>
+                            <div class="layer layer-3" data-layer="3">
+                                <div class="layer-number">3</div>
+                                <div class="layer-name">Сетевой</div>
+                                <div class="layer-description">IP-адресация, маршрутизация</div>
+                                <div class="data-type">Пакет</div>
+                            </div>
+                            <div class="layer layer-2" data-layer="2">
+                                <div class="layer-number">2</div>
+                                <div class="layer-name">Канальный</div>
+                                <div class="layer-description">MAC-адреса, Ethernet</div>
+                                <div class="data-type">Кадр</div>
+                            </div>
+                            <div class="layer layer-1" data-layer="1">
+                                <div class="layer-number">1</div>
+                                <div class="layer-name">Физический</div>
+                                <div class="layer-description">Кабель, радиоволны</div>
+                                <div class="data-type">Биты</div>
+                            </div>
+                        </div>
+                        
+                        <div class="data-flow" id="dataFlow">
+                            <div class="data-packet">📦</div>
+                        </div>
+                    </div>
+                    
+                    <button class="animate-btn" id="animateOSI">Показать передачу данных</button>
+                </div>
+
+                <div class="model-content" id="tcpip-model">
+                    <h3>Модель TCP/IP — реальная модель сетей</h3>
+                    <p><strong>TCP/IP</strong> — это упрощенная (но реальная) модель, по которой работает интернет.</p>
+                    
+                    <div class="tcpip-visualization">
+                        <div class="tcpip-layers">
+                            <div class="tcpip-layer">
+                                <div class="layer-name">Прикладной</div>
+                                <div class="layer-protocols">HTTP, FTP, DNS, SMTP</div>
+                                <div class="osi-mapping">OSI: 7-5</div>
+                            </div>
+                            <div class="tcpip-layer">
+                                <div class="layer-name">Транспортный</div>
+                                <div class="layer-protocols">TCP, UDP</div>
+                                <div class="osi-mapping">OSI: 4</div>
+                            </div>
+                            <div class="tcpip-layer">
+                                <div class="layer-name">Интернет</div>
+                                <div class="layer-protocols">IP, ICMP, ARP</div>
+                                <div class="osi-mapping">OSI: 3</div>
+                            </div>
+                            <div class="tcpip-layer">
+                                <div class="layer-name">Сетевой доступ</div>
+                                <div class="layer-protocols">Ethernet, Wi-Fi, MAC</div>
+                                <div class="osi-mapping">OSI: 2-1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continue with more sections... -->
+        <!-- This is a significant portion. I'll continue with the rest in subsequent commits -->
+        
+    </main>
+
+    <!-- Equipment Details Modal -->
+    <div class="modal" id="equipmentModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/interactive.js"></script>
+</body>
+</html>
