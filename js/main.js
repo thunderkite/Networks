@@ -753,3 +753,12 @@ window.networkGuide = {
     navigateToSection,
     showEquipmentDetails
 };
+
+// Copy command functionality
+function copyCommand(element) {
+    const command = element.textContent;
+    window.networkGuide.copyToClipboard(command);
+}
+
+// Make copyCommand globally available
+window.copyCommand = copyCommand;

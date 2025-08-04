@@ -475,8 +475,677 @@
             </div>
         </section>
 
-        <!-- Continue with more sections... -->
-        <!-- This is a significant portion. I'll continue with the rest in subsequent commits -->
+        <!-- Ethernet Section -->
+        <section id="ethernet" class="content-section">
+            <h2 class="section-title">Проводные сети: Ethernet</h2>
+            
+            <div class="content-block">
+                <h3>Что такое стандарт Ethernet?</h3>
+                <p><strong>Ethernet</strong> — это стандарт, по которому большинство современных проводных сетей обмениваются данными.</p>
+                
+                <div class="ethernet-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h4>🔧 Стандарт Ethernet</h4>
+                            <p>Свод правил, описывающих, как устройства должны «разговаривать» друг с другом по кабелям</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>🔌 Ethernet-кабель</h4>
+                            <p>Физическая проводка (например, «витая пара» Cat5e/Cat6), по которой бегут данные</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>📦 Структура Ethernet кадра</h3>
+                <p><strong>Кадр (Frame)</strong> — это как посылка, с которой работают почтовые службы</p>
+                
+                <div class="frame-structure">
+                    <h4>Компоненты кадра:</h4>
+                    <ul>
+                        <li><strong>Преамбула</strong> — специальная начальная последовательность битов для синхронизации</li>
+                        <li><strong>MAC-адреса</strong> — уникальные адреса отправителя и получателя</li>
+                        <li><strong>Тип/Длина</strong> — показывает, какой протокол или сколько данных внутри кадра</li>
+                        <li><strong>Полезная нагрузка</strong> — собственно, те данные, которые передаются</li>
+                        <li><strong>Трейлер (FCS)</strong> — контрольная сумма для проверки целостности</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wi-Fi Section -->
+        <section id="wifi" class="content-section">
+            <h2 class="section-title">Беспроводные сети: Wi-Fi</h2>
+            
+            <div class="content-block">
+                <h3>Что такое Wi-Fi?</h3>
+                <p><strong>Wi-Fi</strong> — это технология, которая позволяет устройствам обмениваться данными без проводов через радиоволны.</p>
+                
+                <div class="wifi-timeline">
+                    <h4>📅 История Wi-Fi</h4>
+                    <div class="timeline">
+                        <div class="timeline-point">
+                            <span class="year">1999</span>
+                            <span class="event">Первый массовый стандарт 802.11b</span>
+                        </div>
+                        <div class="timeline-point">
+                            <span class="year">2003</span>
+                            <span class="event">802.11g — улучшенная скорость</span>
+                        </div>
+                        <div class="timeline-point">
+                            <span class="year">2009</span>
+                            <span class="event">802.11n — MIMO технология</span>
+                        </div>
+                        <div class="timeline-point">
+                            <span class="year">2013</span>
+                            <span class="event">802.11ac — гигабитные скорости</span>
+                        </div>
+                        <div class="timeline-point">
+                            <span class="year">2019</span>
+                            <span class="event">802.11ax (Wi-Fi 6) — новая эра</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>📡 Как работает Wi-Fi?</h3>
+                <div class="wifi-working">
+                    <div class="working-step">
+                        <div class="step-icon">📡</div>
+                        <div class="step-content">
+                            <h4>Роутер</h4>
+                            <p>Мини-радиостанция у вас дома, передает данные по радиоволнам</p>
+                        </div>
+                    </div>
+                    <div class="working-step">
+                        <div class="step-icon">📱</div>
+                        <div class="step-content">
+                            <h4>Устройства</h4>
+                            <p>Радиоприемники, которые ловят сигналы и отвечают роутеру</p>
+                        </div>
+                    </div>
+                    <div class="working-step">
+                        <div class="step-icon">🌊</div>
+                        <div class="step-content">
+                            <h4>Радиоволны</h4>
+                            <p>Невидимые волны, которые окружают нас и переносят данные</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Router and DHCP Section -->
+        <section id="router" class="content-section">
+            <h2 class="section-title">Роутер как центральный элемент домашней сети</h2>
+            
+            <div class="content-block">
+                <h3>🏠 Роутер — главный в домашней сети</h3>
+                <p>Роутер совмещает в себе несколько функций:</p>
+                
+                <div class="router-functions">
+                    <div class="function-card">
+                        <div class="function-icon">📡</div>
+                        <h4>Точка доступа</h4>
+                        <p>Создает беспроводную сеть, раздает Wi-Fi</p>
+                    </div>
+                    <div class="function-card">
+                        <div class="function-icon">🔄</div>
+                        <h4>Маршрутизатор</h4>
+                        <p>Распределяет данные между интернетом и устройствами дома</p>
+                    </div>
+                    <div class="function-card">
+                        <div class="function-icon">🏷️</div>
+                        <h4>DHCP-сервер</h4>
+                        <p>Выдает каждому устройству уникальный IP-адрес</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>🏷️ Что такое DHCP?</h3>
+                <p><strong>DHCP (Dynamic Host Configuration Protocol)</strong> — это автоматическая выдача IP-адресов.</p>
+                
+                <div class="dhcp-process">
+                    <h4>Процесс получения IP-адреса:</h4>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Устройство подключается к сети</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">DHCP-сервер выдает свободный IP-адрес</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Устройство получает сетевые настройки</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Устройство может работать в сети</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Addressing Section -->
+        <section id="addressing" class="content-section">
+            <h2 class="section-title">Адресация в сетях</h2>
+            
+            <div class="content-block">
+                <h3>🏷️ MAC-адрес</h3>
+                <p><strong>MAC-адрес</strong> — уникальный номер сетевой карты (например, 00:1A:2B:3C:4D:5E), нужен только внутри локальной сети.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>🌐 IP-адрес и его виды</h3>
+                <p><strong>IP-адрес</strong> — это уникальный номер устройства в сети, например, 192.168.1.5.</p>
+                
+                <div class="ip-types">
+                    <div class="ip-type">
+                        <h4>🔓 Белые (публичные) IP-адреса</h4>
+                        <p>Адреса, которые видны в интернете. По ним любой может "достучаться" до устройства из любой точки мира.</p>
+                        <div class="ip-examples">
+                            <code>8.8.8.8</code>
+                            <code>5.255.255.5</code>
+                        </div>
+                    </div>
+                    <div class="ip-type">
+                        <h4>🔒 Серые (частные, приватные) IP-адреса</h4>
+                        <p>Адреса для использования внутри локальных сетей. В интернете не видны.</p>
+                        <div class="ip-ranges">
+                            <div class="range">10.0.0.0 – 10.255.255.255</div>
+                            <div class="range">172.16.0.0 – 172.31.255.255</div>
+                            <div class="range">192.168.0.0 – 192.168.255.255</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>🔄 NAT (Network Address Translation)</h3>
+                <p><strong>NAT</strong> — роутер позволяет всем устройствам в доме выходить в интернет через один внешний IP.</p>
+                
+                <div class="nat-visualization">
+                    <div class="internal-network">
+                        <h4>Внутренняя сеть</h4>
+                        <div class="internal-devices">
+                            <div class="device-ip">192.168.1.100</div>
+                            <div class="device-ip">192.168.1.101</div>
+                            <div class="device-ip">192.168.1.102</div>
+                        </div>
+                    </div>
+                    <div class="nat-router">
+                        <div class="router-icon">🔄</div>
+                        <div class="router-label">NAT Router</div>
+                    </div>
+                    <div class="external-network">
+                        <h4>Интернет</h4>
+                        <div class="external-ip">203.0.113.1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>🚪 Порты в сети</h3>
+                <p><strong>Порт</strong> — это числовой идентификатор (от 0 до 65535), который помогает компьютеру понять, какому приложению отдать входящие данные.</p>
+                
+                <div class="port-categories">
+                    <div class="port-category">
+                        <h4>🏛️ Системные порты (0–1023)</h4>
+                        <p>Зарезервированы для стандартных сервисов</p>
+                        <div class="port-examples">
+                            <span class="port">22 - SSH</span>
+                            <span class="port">80 - HTTP</span>
+                            <span class="port">443 - HTTPS</span>
+                            <span class="port">53 - DNS</span>
+                        </div>
+                    </div>
+                    <div class="port-category">
+                        <h4>👤 Пользовательские порты (1024–49151)</h4>
+                        <p>Используются приложениями, но не закреплены жестко</p>
+                    </div>
+                    <div class="port-category">
+                        <h4>🔄 Динамические порты (49152–65535)</h4>
+                        <p>Применяются для временных клиентских соединений</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARP Protocol Section -->
+        <section id="arp" class="content-section">
+            <h2 class="section-title">Протокол разрешения адресов (ARP)</h2>
+            
+            <div class="content-block">
+                <h3>🔍 ARP — "телефонный справочник" локальной сети</h3>
+                <p><strong>ARP (Address Resolution Protocol)</strong> нужен для автоматического перевода IP-адреса в MAC-адрес в пределах одной локальной сети.</p>
+                
+                <div class="arp-comparison">
+                    <div class="comparison-item">
+                        <h4>DNS</h4>
+                        <p>Переводит доменные имена в IP-адреса</p>
+                        <div class="example">google.com → 142.250.74.206</div>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>ARP</h4>
+                        <p>Переводит IP-адреса в MAC-адреса</p>
+                        <div class="example">192.168.1.10 → 00:AA:BB:CC:DD:EE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>⚙️ Как компьютер определяет, своя ли подсеть?</h3>
+                <div class="subnet-check">
+                    <h4>Процесс проверки:</h4>
+                    <ol>
+                        <li>Берется свой IP и маска подсети</li>
+                        <li>Берется IP назначения</li>
+                        <li>Применяется логическое И (AND) к обоим IP с маской</li>
+                        <li>Если результат одинаков — цель в той же подсети</li>
+                        <li>Если нет — пакет отправляется через шлюз</li>
+                    </ol>
+                    
+                    <div class="subnet-example">
+                        <h4>Пример расчета:</h4>
+                        <div class="calculation">
+                            <div class="calc-line">IP: 192.168.1.5</div>
+                            <div class="calc-line">Маска: 255.255.255.0</div>
+                            <div class="calc-line">Цель: 192.168.1.10</div>
+                            <div class="calc-line result">192.168.1.5 & 255.255.255.0 = 192.168.1.0</div>
+                            <div class="calc-line result">192.168.1.10 & 255.255.255.0 = 192.168.1.0</div>
+                            <div class="calc-line conclusion">Совпало — цель в той же подсети</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DNS Section -->
+        <section id="dns" class="content-section">
+            <h2 class="section-title">DNS (Domain Name System)</h2>
+            
+            <div class="content-block">
+                <h3>🌐 Система доменных имён</h3>
+                <p><strong>DNS</strong> — это система, которая переводит понятные человеку доменные имена (например, yandex.ru, google.com) в IP-адреса, которые понятны компьютерам.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>🔍 Процесс резолвинга DNS</h3>
+                <div class="dns-process">
+                    <div class="dns-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Ввод адреса</h4>
+                            <p>Вы вводите в браузере vk.com</p>
+                        </div>
+                    </div>
+                    <div class="dns-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Проверка кэша</h4>
+                            <p>Система проверяет локальный кэш</p>
+                        </div>
+                    </div>
+                    <div class="dns-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Запрос к DNS-серверу</h4>
+                            <p>Обращение к DNS-серверу провайдера</p>
+                        </div>
+                    </div>
+                    <div class="dns-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Рекурсивный поиск</h4>
+                            <p>Поиск через корневые и авторитетные серверы</p>
+                        </div>
+                    </div>
+                    <div class="dns-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Получение ответа</h4>
+                            <p>IP-адрес возвращается и сохраняется в кэше</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>📋 Основные типы DNS-записей</h3>
+                <div class="dns-records">
+                    <div class="dns-record">
+                        <h4>A-запись</h4>
+                        <p>Связывает доменное имя с IPv4-адресом</p>
+                        <code>example.com. IN A 192.0.2.1</code>
+                    </div>
+                    <div class="dns-record">
+                        <h4>AAAA-запись</h4>
+                        <p>Связывает доменное имя с IPv6-адресом</p>
+                        <code>example.com. IN AAAA 2001:db8::1</code>
+                    </div>
+                    <div class="dns-record">
+                        <h4>CNAME</h4>
+                        <p>Перенаправляет один домен на другой</p>
+                        <code>www.example.com. IN CNAME example.com.</code>
+                    </div>
+                    <div class="dns-record">
+                        <h4>MX-запись</h4>
+                        <p>Указывает почтовые серверы для домена</p>
+                        <code>example.com. IN MX 10 mail.example.com.</code>
+                    </div>
+                    <div class="dns-record">
+                        <h4>TXT-запись</h4>
+                        <p>Хранит текстовую информацию (SPF, DKIM, подтверждения)</p>
+                        <code>example.com. IN TXT "v=spf1 ip4:192.168.1.1 -all"</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Transmission Section -->
+        <section id="data-transmission" class="content-section">
+            <h2 class="section-title">Передача данных: Пример "от браузера до сайта"</h2>
+            
+            <div class="content-block">
+                <h3>🌐 Загрузка HTML-страницы в браузере</h3>
+                <p>Рассмотрим, как происходит загрузка веб-страницы, проходя через уровни сетевой модели.</p>
+                
+                <div class="transmission-layers">
+                    <div class="layer-step">
+                        <div class="layer-number">7-5</div>
+                        <div class="layer-content">
+                            <h4>Прикладной/Представления/Сеансовый</h4>
+                            <p>Браузер создает HTTP-запрос, данные шифруются (HTTPS), устанавливается сессия</p>
+                        </div>
+                    </div>
+                    <div class="layer-step">
+                        <div class="layer-number">4</div>
+                        <div class="layer-content">
+                            <h4>Транспортный</h4>
+                            <p>HTTP-запрос разбивается на TCP сегменты, добавляются номера портов</p>
+                        </div>
+                    </div>
+                    <div class="layer-step">
+                        <div class="layer-number">3</div>
+                        <div class="layer-content">
+                            <h4>Сетевой</h4>
+                            <p>Каждый сегмент упаковывается в IP-пакет с адресами отправителя и получателя</p>
+                        </div>
+                    </div>
+                    <div class="layer-step">
+                        <div class="layer-number">2</div>
+                        <div class="layer-content">
+                            <h4>Канальный</h4>
+                            <p>IP-пакет упаковывается в Ethernet кадр с MAC-адресами</p>
+                        </div>
+                    </div>
+                    <div class="layer-step">
+                        <div class="layer-number">1</div>
+                        <div class="layer-content">
+                            <h4>Физический</h4>
+                            <p>Кадр превращается в поток битов и передается по кабелю или Wi-Fi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAN and PON Section -->
+        <section id="wan-pon" class="content-section">
+            <h2 class="section-title">WAN и PON — порты подключения к интернету</h2>
+            
+            <div class="content-block">
+                <div class="port-comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>WAN-порт (Ethernet)</th>
+                                <th>PON-порт (Оптоволокно)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Тип кабеля</td>
+                                <td>Медный Ethernet (RJ-45)</td>
+                                <td>Оптоволоконный (SC/APC)</td>
+                            </tr>
+                            <tr>
+                                <td>Подключение</td>
+                                <td>К модему/сетевому устройству</td>
+                                <td>К оптоволоконной линии</td>
+                            </tr>
+                            <tr>
+                                <td>Требуется модем</td>
+                                <td>Да, если провайдер не Ethernet</td>
+                                <td>Нет, модем встроен (ONT/ONU)</td>
+                            </tr>
+                            <tr>
+                                <td>Скорость</td>
+                                <td>До 1 Гбит/с</td>
+                                <td>До нескольких Гбит/с</td>
+                            </tr>
+                            <tr>
+                                <td>Применение</td>
+                                <td>DSL, кабель, Ethernet</td>
+                                <td>FTTH (оптика до квартиры)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnostics Section -->
+        <section id="diagnostics" class="content-section">
+            <h2 class="section-title">Диагностика и траблшутинг сетей в Linux</h2>
+            
+            <div class="content-block">
+                <h3>🔧 Диагностика физических и канальных проблем (уровни 1-2 OSI)</h3>
+                <div class="diagnostic-commands">
+                    <div class="command-group">
+                        <h4>ip link / ifconfig</h4>
+                        <p>Показывают список всех сетевых интерфейсов, их состояние, MAC-адреса</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">ip link</code>
+                            <code onclick="copyCommand(this)">ifconfig</code>
+                        </div>
+                    </div>
+                    <div class="command-group">
+                        <h4>ethtool</h4>
+                        <p>Показывает физические параметры Ethernet-интерфейса</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">ethtool eth0</code>
+                        </div>
+                    </div>
+                    <div class="command-group">
+                        <h4>mii-tool</h4>
+                        <p>Проверяет наличие линка, поддерживаемые скорости</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">mii-tool eth0</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>🌐 Диагностика сетевого уровня (уровень 3 OSI)</h3>
+                <div class="diagnostic-commands">
+                    <div class="command-group">
+                        <h4>ping</h4>
+                        <p>Проверяет доступность другого устройства, измеряет задержку</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">ping 8.8.8.8</code>
+                            <code onclick="copyCommand(this)">ping -c 4 google.com</code>
+                        </div>
+                    </div>
+                    <div class="command-group">
+                        <h4>traceroute</h4>
+                        <p>Показывает маршрут до цели через интернет</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">traceroute google.com</code>
+                            <code onclick="copyCommand(this)">traceroute -n ya.ru</code>
+                        </div>
+                    </div>
+                    <div class="command-group">
+                        <h4>ip addr / ip route</h4>
+                        <p>Показывает IP-адреса и таблицу маршрутизации</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">ip addr</code>
+                            <code onclick="copyCommand(this)">ip route</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>🚪 Диагностика транспортного уровня (уровень 4 OSI)</h3>
+                <div class="diagnostic-commands">
+                    <div class="command-group">
+                        <h4>ss / netstat</h4>
+                        <p>Список всех слушающих и установленных соединений</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">ss -tulnp</code>
+                            <code onclick="copyCommand(this)">netstat -tulnp</code>
+                        </div>
+                    </div>
+                    <div class="command-group">
+                        <h4>nc (netcat)</h4>
+                        <p>Универсальный инструмент для теста TCP/UDP соединений</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">nc -zv google.com 80</code>
+                            <code onclick="copyCommand(this)">nc -l 12345</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>🌐 Диагностика верхних уровней (5-7 OSI)</h3>
+                <div class="diagnostic-commands">
+                    <div class="command-group">
+                        <h4>curl</h4>
+                        <p>Отправляет HTTP/HTTPS-запросы, показывает ответ сервера</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">curl google.com</code>
+                            <code onclick="copyCommand(this)">curl -I ya.ru</code>
+                            <code onclick="copyCommand(this)">curl -v https://example.com</code>
+                        </div>
+                    </div>
+                    <div class="command-group">
+                        <h4>dig</h4>
+                        <p>Проверяет DNS-записи, узнаёт IP по имени</p>
+                        <div class="command-examples">
+                            <code onclick="copyCommand(this)">dig google.com</code>
+                            <code onclick="copyCommand(this)">dig google.com MX</code>
+                            <code onclick="copyCommand(this)">dig @8.8.8.8 example.com</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glossary Section -->
+        <section id="glossary" class="content-section">
+            <h2 class="section-title">Словарь сетевых терминов</h2>
+            
+            <div class="content-block">
+                <div class="glossary-grid">
+                    <div class="glossary-item">
+                        <h4>Бит</h4>
+                        <p>Одна единичка информации: 0 или 1</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Кадр</h4>
+                        <p>Упакованные данные для передачи по локальной сети; «коробка» с адресами и проверкой ошибок</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Пакет</h4>
+                        <p>Данные для передачи между сетями, включает IP-адреса</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Сегмент</h4>
+                        <p>Кусочек данных с номерами портов и служебной информацией (TCP/UDP)</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>MAC-адрес</h4>
+                        <p>Уникальный номер сетевой карты (например, 00:1A:2B:3C:4D:5E)</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>IP-адрес</h4>
+                        <p>Уникальный адрес устройства в сети (например, 192.168.1.10)</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Протокол</h4>
+                        <p>Четкие правила, по которым устройства обмениваются данными</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Порт</h4>
+                        <p>«Квартира» внутри IP-адреса для разных приложений (например, 80 — сайты)</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>NAT</h4>
+                        <p>«Подмена» адресов, когда все устройства дома выходят в интернет под одним внешним IP</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Белый IP</h4>
+                        <p>Публичный IP-адрес, доступный из интернета</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Серый IP</h4>
+                        <p>Частный (приватный) IP-адрес, работает только внутри локальной сети</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Gateway</h4>
+                        <p>Шлюз по умолчанию, точка выхода из локальной сети</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Schemes Section -->
+        <section id="visual-schemes" class="content-section">
+            <h2 class="section-title">Визуальные схемы для запоминания</h2>
+            
+            <div class="content-block">
+                <h3>🏗️ Модель OSI</h3>
+                <div class="visual-scheme">
+                    <div class="scheme-diagram">
+                        [Пользователь] ↔ [Приложение] ↔ [Представление] ↔ [Сессия] ↔ [Транспорт] ↔ [Сеть] ↔ [Канал] ↔ [Физика]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>🌐 Модель TCP/IP</h3>
+                <div class="visual-scheme">
+                    <div class="scheme-diagram">
+                        [Приложение] ↔ [Транспорт] ↔ [Интернет] ↔ [Доступ к сети]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>💡 Запоминалка</h3>
+                <div class="memory-tips">
+                    <ul>
+                        <li>Представляй уровни как этажи в доме: каждый решает свою задачу</li>
+                        <li>Кадр = коробка, IP-адрес = адрес дома, порт = квартира, MAC = паспорт</li>
+                        <li>Преамбула — как стук в дверь: устройство «просыпается» и готово принимать данные</li>
+                        <li>Трейлер/FCS — как наклейка «не вскрывать до получения»: если повреждена — выбрасываем</li>
+                        <li>Старайся объяснять это простыми словами, будто учишь друга</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         
     </main>
 
