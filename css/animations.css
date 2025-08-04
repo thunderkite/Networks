@@ -1,0 +1,604 @@
+/* Animations CSS */
+
+/* Keyframe Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalSlideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.8), 0 0 30px rgba(37, 99, 235, 0.6);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dataFlow {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes networkPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes connectionLine {
+    0% {
+        stroke-dashoffset: 100;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Animation Classes */
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-fadeInScale {
+    animation: fadeInScale 0.6s ease-out;
+}
+
+.animate-slideInFromLeft {
+    animation: slideInFromLeft 0.6s ease-out;
+}
+
+.animate-slideInFromRight {
+    animation: slideInFromRight 0.6s ease-out;
+}
+
+.animate-slideInFromTop {
+    animation: slideInFromTop 0.6s ease-out;
+}
+
+.animate-slideInFromBottom {
+    animation: slideInFromBottom 0.6s ease-out;
+}
+
+.animate-bounce {
+    animation: bounce 1s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-glow {
+    animation: glow 2s infinite;
+}
+
+.animate-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.animate-shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Delayed animations for staggered effects */
+.animate-delay-100 {
+    animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+    animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+    animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+    animation-delay: 0.5s;
+}
+
+/* Hover animations */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+/* OSI Layer Animation */
+.osi-layer-active {
+    animation: glow 1s ease-in-out;
+    border-color: var(--primary-color) !important;
+    background: rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Data Transmission Animation */
+.data-transmission-active .data-flow {
+    opacity: 1;
+}
+
+.data-transmission-active .data-packet {
+    animation: dataFlow 3s ease-in-out infinite;
+}
+
+/* Network Device Animations */
+.network-device {
+    transition: all 0.3s ease;
+}
+
+.network-device.active {
+    animation: networkPulse 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.5));
+}
+
+.network-device.transmitting::after {
+    content: '📡';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.8em;
+    animation: pulse 1s infinite;
+}
+
+/* Connection Lines Animation */
+.connection-line {
+    stroke: var(--primary-color);
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+    animation: connectionLine 2s linear infinite;
+}
+
+.connection-line.active {
+    stroke: var(--accent-color);
+    stroke-width: 3;
+    filter: drop-shadow(0 0 3px rgba(99, 102, 241, 0.7));
+}
+
+/* Loading Animation */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(37, 99, 235, 0.2),
+        transparent
+    );
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Typing Animation */
+.typing {
+    overflow: hidden;
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    animation: typewriter 3s steps(30) 1s both, blink 1s step-end infinite;
+}
+
+/* Staggered Animations */
+.stagger-animation > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+.stagger-animation > *:nth-child(7) { animation-delay: 0.7s; }
+.stagger-animation > *:nth-child(8) { animation-delay: 0.8s; }
+.stagger-animation > *:nth-child(9) { animation-delay: 0.9s; }
+.stagger-animation > *:nth-child(10) { animation-delay: 1.0s; }
+
+/* Progress Animations */
+.progress-fill {
+    transition: width 0.3s ease;
+}
+
+.progress-fill.animated {
+    animation: progressFill 2s ease-out;
+}
+
+@keyframes progressFill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--progress-width);
+    }
+}
+
+/* Scroll-triggered animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Interactive Element Animations */
+.interactive-element {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.interactive-element:hover {
+    transform: scale(1.02);
+}
+
+.interactive-element:active {
+    transform: scale(0.98);
+}
+
+.interactive-element.clicked {
+    animation: bounce 0.6s ease;
+}
+
+/* Success/Error Animations */
+.success-animation {
+    animation: fadeInScale 0.6s ease, glow 1s ease 0.6s;
+    border-color: #10b981 !important;
+}
+
+.error-animation {
+    animation: shake 0.5s ease;
+    border-color: #ef4444 !important;
+}
+
+/* Particle Effects */
+.particle-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle 3s linear infinite;
+}
+
+@keyframes particle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Text Effects */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Morphing Animations */
+.morph {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.morph.active {
+    border-radius: 50%;
+    transform: rotate(180deg);
+}
+
+/* Floating Animation */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Attention-seeking Animations */
+.attention-seeker {
+    animation: attention 2s ease-in-out infinite;
+}
+
+@keyframes attention {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+}
+
+/* Smooth reveal on scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .animate-pulse,
+    .animate-bounce,
+    .animate-rotate,
+    .particle,
+    .float,
+    .attention-seeker {
+        animation: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .glow,
+    .animate-glow {
+        box-shadow: none !important;
+    }
+    
+    .connection-line {
+        stroke-width: 4px !important;
+    }
+}
